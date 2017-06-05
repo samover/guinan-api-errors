@@ -6,7 +6,7 @@
  * Copyright (c) 2099997 iCapps. All rights reserved.
  */
 
-const errorFactory = require("../lib");
+const errorFactory = require("../lib/factory");
 const errors = require("../lib/errors");
 const errorsConfig = require("../lib/errors.config");
 
@@ -42,6 +42,23 @@ describe("ApiError", () => {
                 expect(error).not.toBeInstanceOf(errors.ApiError);
                 expect(error.message).toMatch("ApiError config not found");
             }
+        });
+    });
+
+    describe("#isParentOf", () => {
+        it("Returns true when error is a child of ApiError", () => {
+            const error = new errors.ForbiddenError({
+                code: 1,
+                message: "Access Denied",
+                detail: "Your token has expired",
+                url: "http://example.com/errors/1"
+            });
+
+            expect(errorFactory.isParentOf(error)).toBe(true);
+        });
+        it("Returns false when error is not a child of ApiError", () => {
+            const error = new Error("Something wenth wrong");
+            expect(errorFactory.isParentOf(error)).toBe(false);
         });
     });
 
