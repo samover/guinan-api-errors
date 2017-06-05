@@ -1,6 +1,6 @@
 {
     "name": "guinan-api-errors",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Simple api error throwing with predefined errors",
     "main": "index.js",
     "author": "samover <github@samover.33mail.com>",
