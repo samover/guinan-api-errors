@@ -1,0 +1,22 @@
+{
+  "name": "icapps_api_error",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "samover <samuel.overloop@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "./node_modules/.bin/jest"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-node": "^5.0.0",
+    "jest": "^20.0.4"
+  },
+  "dependencies": {
+    "uuid": "^3.0.1",
+    "http-status": "^1.0.1"
+  }
+}
