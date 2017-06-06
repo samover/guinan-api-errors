@@ -5,8 +5,8 @@ all the iCapps API's.
 
 ## Installation
 
-- `yarn add api-error`
-- `const ApiError = require('api-error')`
+- `yarn add guinan-api-errors`
+- `const ApiError = require('guinan-api-errors')`
 
 ## Configuration
 
@@ -14,7 +14,7 @@ Configure once at the entry point of your app: `ApiError.config({})`.
 
 ### Aditional error definitions
 
-You can pass a config object which will extend the [default iCapps error definitions](https://github.com/samover/api-error/blob/master/lib/errors.config.js). Make sure to user error codes > 9999 for additional error definitions.
+You can pass a config object which will extend the [default iCapps error definitions](https://github.com/samover/api-error/blob/master/lib/errors.config.js). Make sure to use error codes > 9999 for additional error definitions.
 
 Use the format:
 ```
